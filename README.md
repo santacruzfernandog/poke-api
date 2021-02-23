@@ -1,3 +1,28 @@
+Link publico: https://auth-a959b.web.app/
+
+
+# Sitio desarrollado con React, Redux y Firebase.
+
+• Sistema de registro y autenticacion de Google.
+
+• Manejo de sesiones de usuario.
+
+• POKE-API.
+
+• Paginacion.
+
+• Rutas protegidas.
+
+• Perfil y de usuario.
+
+• Administracion de perfil de usuario.
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
