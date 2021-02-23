@@ -46,6 +46,8 @@ export const ingresoUsuarioAccion = ()=> async(dispatch)=> {
             photoURL: res.user.photoURL
         }
 
+        console.log(usuario)
+
         const usuarioDB = await db.collection('usuarios').doc(usuario.email).get()
         console.log(usuarioDB)
         if(usuarioDB.exists){
@@ -68,12 +70,16 @@ export const ingresoUsuarioAccion = ()=> async(dispatch)=> {
             type: USUARIO_EXITO,
             payload: {
                 uid: res.user.uid,
-                email: res.user.email
+                email: res.user.email,
+                displayName: res.user.displayName,
+                photoURL: res.user.photoURL
             }
         })
         localStorage.setItem('usuario', JSON.stringify({
             uid: res.user.uid,
-            email: res.user.email
+            email: res.user.email,
+            displayName: res.user.displayName,
+            photoURL: res.user.photoURL
         }))
         
     } catch (error) {

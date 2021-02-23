@@ -46,7 +46,7 @@ const Perfil = () => {
             <div className="card">
 
                 <div className="card-body">
-                    <img src={usuario.photoURL} alt="" className="img-fluid"/>
+                    <img src={usuario.photoURL} alt="" width="150" className="img-fluid"/>
                     <h5 className="card-title mt-3">Nombre: {usuario.displayName}</h5>
                     <p className="card-text">Email: {usuario.email}</p>
                     <button className="btn btn-dark btn-sm mb-2" onClick={()=> setActivarFormulario(true)}>
@@ -63,14 +63,14 @@ const Perfil = () => {
                     <div className="custom-file">
                         <input
                             type="file"
-                            className="custom-file-input"
+                            className="custom-file-input d-none"
                             id="inputGroupFile01"
-                            style={{display: 'none'}}
                             onChange={e => seleccionarArchivo(e)}
                             disabled={loading} />
                         <label
-                            className={loading ? 'btn btn-dark btn-sm' : 'btn btn-dark btn-sm disabled'}
-                            htmlFor="inputGroupFile01">
+                            className={loading ? 'btn btn-dark btn-sm disabled' : 'btn btn-dark btn-sm'}
+                            htmlFor="inputGroupFile01"
+                            style={{cursor: 'pointer'}}>
                             Actualizar imagen
                         </label>
                     </div>
